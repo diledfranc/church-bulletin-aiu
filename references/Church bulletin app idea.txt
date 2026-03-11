@@ -1,0 +1,34 @@
+Church bulletin app 
+
+1. Program flow
+2. Announcement section
+3. Contact information section
+4. Current ongoing program section (e.g. "Now is: Offertory")
+5. Next week's duty roster for greeters
+
+Roles: Admin, Users, Coordinator
+
+Coordinator updates program flow including responsible people tasked. Coordinator updates Announcements. CRUD
+Users view program flow and announcements.
+
+Activity flow: 1. Login(or already logged in) -> homepage -> program flow -> homepage -> announcements -> homepage --> contact information
+2. Creatiing a new announcement: Coordinator log in -> dashboard? -> Create announcement section -> Create
+3. Viewing, updating, and deleting: Coordinator go to announcement list -> click an announcement -> make changes -> update. Delete old announcements
+4. Creating the bulletin or program flow: Coordinator go to program flow -> 
+
+Concerns: 1. During offertory, payment through banking app requires leaving the app. 2.  Live updates may not be as necessary considering that church usually have their livestream. 
+Should we archive program flows and announcements? If yes, how long and what do we use the data for? 
+Should users be required to create an account to see the program flow and announcements?
+Optional(?) requirement: When tasking a person/group for a responsibility, that person needs to exist as a user. 
+
+Homepage:
+Program Flow:
+Announcements:
+	Features: 1. Announcement alerts and notifications to the mobile phone.
+		  2. Red icon that shows the number of announcements (unread) at the announcements tab
+		  3. Automatically removing announcements of an event from the app when the date/time of the event has passed (deletion can be immediate 		  or a time interval later)
+
+Contact information:
+
+Database: users, program_flow_logs, announcements_logs, audit_log, etc. We use NoSQL and connect to Firebase. 
+	

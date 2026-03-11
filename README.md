@@ -1,16 +1,43 @@
-# aiu_church_program_bulletin
+# AIU Church Program Bulletin
 
-A new Flutter project.
+A Flutter mobile application for the AIU Church, featuring a digital program bulletin and announcements.
+
+## Features
+
+- **Weekly Program Bulletin**: View the order of service, hymns, scripture readings, and sermon details.
+- **Announcements**: Stay updated with upcoming church events and notifications.
+- **Offline Access**: The content is bundled with the app (currently using placeholder data).
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To run this project, ensure you have Flutter installed and set up.
 
-A few resources to get you started if this is your first Flutter project:
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/diledfranc/church-bulletin-aiu.git
+    cd church-bulletin-aiu
+    ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2.  **Install dependencies**:
+    ```bash
+    flutter pub get
+    ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3.  **Run the app**:
+    ```bash
+    flutter run
+    ```
+
+## Project Structure
+
+- `lib/models`: Data models for Bulletin Items and Announcements.
+- `lib/screens`: UI screens for the Bulletin, Announcements, and Home.
+- `lib/data`: Dummy data used to populate the app (replace with API or local database in the future).
+- `lib/widgets`: Reusable UI components.
+
+## Future Improvements
+
+- Add a backend to manage bulletin and announcements dynamically.
+- Integration with calendar for events.
+- Push notifications for important updates.
+- Theme customization.
