@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+import 'providers/auth_provider.dart';
 import 'screens/home_screen.dart';
+// import 'firebase_options.dart'; // Uncomment this once generated
+import 'services/seeder_service.dart'; // Import seeder service for testing
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp(
+  //   options: DefaultFirebaseOptions.currentPlatform, // Uncomment this once generated
+  // );
+
+  // Uncomment to seed the database ONCE (then comment out again)
+  // await SeederService().seedFirestore();
+
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => AuthProvider())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
