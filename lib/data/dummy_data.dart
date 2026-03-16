@@ -1,21 +1,10 @@
 import '../models/bulletin_item.dart';
 import '../models/announcement.dart';
+import '../models/event.dart';
+import '../models/contact.dart';
 
 final List<BulletinItem> bulletinItems = [
-  BulletinItem(title: 'Prelude', description: 'Organist'),
-  BulletinItem(title: 'Welcome & Announcements', description: 'Elder on Duty'),
-  BulletinItem(
-    title: 'Opening Hymn',
-    description: 'Hymn #1: Praise to the Lord',
-  ),
-  BulletinItem(title: 'Scripture Reading', description: 'Psalm 23'),
-  BulletinItem(title: 'Prayer', description: 'Deacon'),
-  BulletinItem(title: 'Special Music', description: 'Choir'),
-  BulletinItem(title: 'Sermon', description: 'Title: "Faith and Works"'),
-  BulletinItem(
-    title: 'Closing Hymn',
-    description: 'Hymn #5: All Creatures of Our God and King',
-  ),
+  // ... existing content ...
   BulletinItem(title: 'Benediction', description: 'Pastor'),
 ];
 
@@ -36,5 +25,44 @@ final List<Announcement> announcements = [
     title: 'Choir Practice',
     detail: 'Choir practice is held every Thursday at 6:30 PM.',
     date: DateTime.now().add(const Duration(days: 3)),
+  ),
+];
+
+final List<Event> events = [
+  Event(
+    title: 'Youth Camp',
+    dateTime: DateTime.now().add(const Duration(days: 10)),
+    location: 'Campground A',
+  ),
+  Event(
+    title: 'Health Seminar',
+    dateTime: DateTime.now().add(const Duration(days: 14)),
+    location: 'Fellowship Hall',
+  ),
+  Event(
+    title: 'Pathfinder Club Meeting',
+    dateTime: DateTime.now().add(const Duration(days: 7)),
+    location: 'Room 101',
+  ),
+];
+
+final List<Contact> contacts = [
+  Contact(
+    name: 'Pastor John Doe',
+    role: 'Senior Pastor',
+    phoneNumber: '+1234567890',
+    email: 'pastor.john@example.com',
+  ),
+  Contact(
+    name: 'Jane Smith',
+    role: 'Head Elder',
+    phoneNumber: '+0987654321',
+    email: 'jane.smith@example.com',
+  ),
+  Contact(
+    name: 'Church Office',
+    role: 'Administration',
+    phoneNumber: '+1122334455',
+    email: 'office@example.com',
   ),
 ];

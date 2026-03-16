@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1A237E),
-        ), // Deep blue as a church color
+          seedColor: const Color(0xFF18345E),
+        ), // Specific Theme Color branding #18345e
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
           centerTitle: true,
-          backgroundColor: Color(0xFF1A237E),
+          backgroundColor: Color(0xFF18345E),
           foregroundColor: Colors.white,
         ),
       ),

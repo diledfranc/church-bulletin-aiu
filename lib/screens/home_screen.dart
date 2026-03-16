@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'bulletin_screen.dart';
 import 'announcements_screen.dart';
+import 'events_calendar_screen.dart';
+import 'contacts_screen.dart';
+import '../widgets/app_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,6 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     BulletinScreen(),
     AnnouncementsScreen(),
+    EventsCalendarScreen(),
+    ContactsScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -26,22 +31,36 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Church Bulletin'),
-        centerTitle: true,
-        elevation: 2,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(60.0),
+        child: AppBar(
+          automaticallyImplyLeading: false, // Hide back button if needed
+          flexibleSpace: const SafeArea(child: AppHeader()),
+          elevation: 0,
+          backgroundColor: const Color(0xFF18345E),
+          foregroundColor: Colors.white, // For icons/text if added to header
+        ),
       ),
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, // Needed for 4+ items
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.list_alt), label: 'Program'),
           BottomNavigationBarItem(
             icon: Icon(Icons.campaign),
-            label: 'Announcements',
+            label: 'Announce',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month),
+            label: 'Calendar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contacts),
+            label: 'Contacts',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Theme.of(context).colorScheme.primary,
+        selectedItemColor: const Color(0xFF18345E), // Theme color
         onTap: _onItemTapped,
       ),
     );
