@@ -19,7 +19,7 @@ class User {
       name: data['name'] ?? '',
       email: data['email'] ?? '',
       role: UserRole.values.firstWhere(
-        (e) => e.toString() == 'UserRole.${data['role']}',
+        (e) => e.name == data['role'],
         orElse: () => UserRole.user,
       ),
     );

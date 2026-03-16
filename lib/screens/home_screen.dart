@@ -3,6 +3,7 @@ import 'bulletin_screen.dart';
 import 'announcements_screen.dart';
 import 'events_calendar_screen.dart';
 import 'contacts_screen.dart';
+import 'duty_roster_screen.dart'; // Import DutyRosterScreen
 import '../widgets/app_header.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     AnnouncementsScreen(),
     EventsCalendarScreen(),
     ContactsScreen(),
+    DutyRosterScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -57,6 +59,10 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.contacts),
             label: 'Contacts',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.assignment_ind),
+            label: 'Roster',
           ),
         ],
         currentIndex: _selectedIndex,

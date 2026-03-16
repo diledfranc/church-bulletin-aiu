@@ -12,7 +12,12 @@
           "package_name": "com.example.aiu_church_program_bulletin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "928748426069-3p33s6tj3h59fvg7gocm50pmjpnh0cvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA8APMM985BNYJTnH-jPI8gZNvdMnA5U3E"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928748426069-3p33s6tj3h59fvg7gocm50pmjpnh0cvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

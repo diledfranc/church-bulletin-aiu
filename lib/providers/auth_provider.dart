@@ -60,6 +60,32 @@ class AuthProvider with ChangeNotifier {
     );
   }
 
+  Future<void> signUp(String email, String password, String name) async {
+    auth.UserCredential credential = await _firebaseAuth
+        .createUserWithEmailAndPassword(email: email, password: password);
+
+    if (credential.user != null) {
+      await credential.user!.updateDisplayName(name);
+
+      // Assign Role based on email domain or specific address for demo purposes
+      UserRole initialRole = UserRole.user;
+      if (email == 'admin@aiu.edu') {
+        initialRole = UserRole.admin;
+      } else if (email == 'clerk@aiu.edu') {
+        initialRole = UserRole.clerk;
+      }
+
+      await _firestore.collection('users').doc(credential.user!.uid).set({
+        'name': name,
+        'email': email,
+        'role': initialRole.name,
+      });
+
+      // Force refresh of local user data
+      await _onAuthStateChanged(credential.user);
+    }
+  }
+
   Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }

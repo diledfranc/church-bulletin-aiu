@@ -43,6 +43,7 @@ class _EditEventScreenState extends State<EditEventScreen> {
     );
 
     if (pickedDate != null) {
+      if (!mounted) return;
       final TimeOfDay? pickedTime = await showTimePicker(
         context: context,
         initialTime: TimeOfDay.fromDateTime(_selectedDateTime),

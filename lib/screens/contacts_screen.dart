@@ -65,19 +65,29 @@ class ContactsScreen extends StatelessWidget {
                         children: [
                           const Icon(Icons.phone, size: 14, color: Colors.grey),
                           const SizedBox(width: 4),
-                          Text(contact.phoneNumber),
+                          Expanded(
+                            child: Text(
+                              contact.phoneNumber,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                       Row(
                         children: [
                           const Icon(Icons.email, size: 14, color: Colors.grey),
                           const SizedBox(width: 4),
-                          Text(contact.email),
+                          Expanded(
+                            child: Text(
+                              contact.email,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
-                  isThreeLine: true,
+                  // Removed isThreeLine: true to allow dynamic height
                   trailing: authProvider.keyCanEdit
                       ? Row(
                           mainAxisSize: MainAxisSize.min,

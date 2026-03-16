@@ -41,26 +41,36 @@ class EventsCalendarScreen extends StatelessWidget {
                 elevation: 2,
                 child: ListTile(
                   leading: Container(
-                    padding: const EdgeInsets.all(8),
+                    width: 50,
+                    height: 50,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor.withOpacity(0.1),
+                      color: Theme.of(
+                        context,
+                      ).primaryColor.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          DateFormat.d().format(event.dateTime),
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            DateFormat.d().format(event.dateTime),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              height: 1.0,
+                            ),
                           ),
-                        ),
-                        Text(
-                          DateFormat.MMM().format(event.dateTime).toUpperCase(),
-                          style: const TextStyle(fontSize: 10),
-                        ),
-                      ],
+                          Text(
+                            DateFormat.MMM()
+                                .format(event.dateTime)
+                                .toUpperCase(),
+                            style: const TextStyle(fontSize: 10, height: 1.0),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   title: Text(
