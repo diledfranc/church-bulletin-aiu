@@ -13,27 +13,27 @@ A Flutter mobile application for the AIU Church, featuring a digital program bul
 To run this project, ensure you have Flutter installed and set up.
 
 1.  **Clone the repository**:
-    ```bash
+    `ash
     git clone https://github.com/diledfranc/church-bulletin-aiu.git
     cd church-bulletin-aiu
-    ```
+    `
 
 2.  **Install dependencies**:
-    ```bash
+    `ash
     flutter pub get
-    ```
+    `
 
 3.  **Run the app**:
-    ```bash
+    `ash
     flutter run
-    ```
+    `
 
 ## Project Structure
 
-- `lib/models`: Data models for Bulletin Items and Announcements.
-- `lib/screens`: UI screens for the Bulletin, Announcements, and Home.
-- `lib/data`: Dummy data used to populate the app (replace with API or local database in the future).
-- `lib/widgets`: Reusable UI components.
+- lib/models: Data models for Bulletin Items and Announcements.
+- lib/screens: UI screens for the Bulletin, Announcements, and Home.
+- lib/data: Dummy data used to populate the app (replace with API or local database in the future).
+- lib/widgets: Reusable UI components.
 
 ## Future Improvements
 
